@@ -31,7 +31,7 @@ inquirer.prompt(
         {
             type: 'input',
             name: 'shapeColor',
-            message: 'What color should the svg be?'
+            message: 'What color should the svg be (must be a vailid color or a hexadecimal)?'
         }
     ]
 )
@@ -43,11 +43,9 @@ inquirer.prompt(
             answers.characters,
             answers.shapeColor,
         )
-        console.log(newCircle.textColor);
         fs.writeFile('./assets/logo.svg', renderCircle(newCircle), (err) => {
             err ? console.error(err) : console.log('Generated logo.svg');
           });
-        console.log(newCircle);
     } else if (answers.svgShape === 'square'){
         const newSquare = new Square(
             answers.svgShape,
@@ -58,7 +56,6 @@ inquirer.prompt(
         fs.writeFile('./assets/logo.svg', renderSquare(newSquare), (err) => {
             err ? console.error(err) : console.log('Generated logo.svg');
           });
-        console.log(newSquare);
     } else if(answers.svgShape === 'triangle'){
         const newTriangle = new Triangle(
             answers.svgShape,
@@ -69,7 +66,6 @@ inquirer.prompt(
         fs.writeFile('./assets/logo.svg', renderTriangle(newTriangle), (err) => {
             err ? console.error(err) : console.log('Generated logo.svg');
           });
-        console.log(newTriangle);
     } else {
         console.log('opps something wrong');
     }
