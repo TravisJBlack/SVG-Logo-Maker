@@ -14,7 +14,10 @@ Please use the provide link to download Node.js. Node.js will allow you to be ab
 This application is used to generate a logo in the svg file format. Once all the installations are completed, you can navigate to the correct path in the command prompt and type in node index.js. This will start the program and you will be asked a series of questions. Once you have completed those question, you will notice that your svg file has been created! 
 
 
-<a href=''>Video walkthrough of application</a>
+<a href='https://drive.google.com/file/d/1FnmO1ydrJNetbOl0v--qqF7qcl3n6ueK/view?usp=sharing'>Video walkthrough of application</a>
 
-![Screenshot of webpage]()
+![Screenshot of webpage](/Images/circleExapmle.png)
+![Screenshot of webpage](/Images/squareExample.png)
+![Screenshot of webpage](/Images/triangleExapmle.png)
+
 
