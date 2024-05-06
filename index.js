@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
-const {Circle, renderCircle} = require('./lib/circle')
-const {Square, renderSquare} = require('./lib/square')
-const {Triangle, renderTriangle} = require('./lib/triangle')
+const {Circle} = require('./lib/circle')
+const {Square} = require('./lib/square')
+const {Triangle} = require('./lib/triangle')
 const fs = require('fs');
 
 inquirer.prompt(
@@ -43,7 +43,7 @@ inquirer.prompt(
             answers.characters,
             answers.shapeColor,
         )
-        fs.writeFile('./assets/logo.svg', renderCircle(newCircle), (err) => {
+        fs.writeFile('./assets/logo.svg', newCircle.render(newCircle), (err) => {
             err ? console.error(err) : console.log('Generated logo.svg');
           });
     } else if (answers.svgShape === 'square'){
@@ -53,7 +53,7 @@ inquirer.prompt(
             answers.characters,
             answers.shapeColor,
         )
-        fs.writeFile('./assets/logo.svg', renderSquare(newSquare), (err) => {
+        fs.writeFile('./assets/logo.svg', newSquare.render(newSquare), (err) => {
             err ? console.error(err) : console.log('Generated logo.svg');
           });
     } else if(answers.svgShape === 'triangle'){
@@ -63,7 +63,7 @@ inquirer.prompt(
             answers.characters,
             answers.shapeColor,
         )
-        fs.writeFile('./assets/logo.svg', renderTriangle(newTriangle), (err) => {
+        fs.writeFile('./assets/logo.svg', newTriangle.render(newTriangle), (err) => {
             err ? console.error(err) : console.log('Generated logo.svg');
           });
     } else {
